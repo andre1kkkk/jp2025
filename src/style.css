@@ -1,0 +1,202 @@
+:root {
+  --background: #ffffff;
+  --foreground: #475569;
+  --card: #f1f5f9;
+  --card-foreground: #059669;
+  --popover: #ffffff;
+  --popover-foreground: #475569;
+  --primary: #059669;
+  --primary-foreground: #ffffff;
+  --secondary: #10b981;
+  --secondary-foreground: #ffffff;
+  --muted: #f1f5f9;
+  --muted-foreground: #4b5563;
+  --accent: #10b981;
+  --accent-foreground: #ffffff;
+  --destructive: #f87171;
+  --destructive-foreground: #ffffff;
+  --border: #d1d5db;
+  --input: #ffffff;
+  --ring: rgba(0, 0, 0, 0.1);
+  --chart-1: #059669;
+  --chart-2: #10b981;
+  --chart-3: #f1f5f9;
+  --chart-4: #4b5563;
+  --chart-5: #ffffff;
+  --radius: 0.5rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #475569;
+  --sidebar-primary: #059669;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #10b981;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #d1d5db;
+  --sidebar-ring: rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Bootstrap theme colors */
+:root {
+  --bs-primary: var(--primary);
+  --bs-primary-rgb: 5, 150, 105;
+  --bs-secondary: var(--secondary);
+  --bs-secondary-rgb: 16, 185, 129;
+  --bs-success: var(--accent);
+  --bs-success-rgb: 16, 185, 129;
+  --bs-light: var(--muted);
+  --bs-light-rgb: 241, 245, 249;
+  --bs-dark: var(--foreground);
+  --bs-dark-rgb: 71, 85, 105;
+}
+
+/* Custom classes */
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.btn-primary:hover {
+  background-color: #047857;
+  border-color: #047857;
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.btn-accent:hover {
+  background-color: #059669;
+  border-color: #059669;
+  color: white;
+}
+
+.bg-accent {
+  background-color: var(--accent) !important;
+}
+
+.text-accent {
+  color: var(--accent) !important;
+}
+
+/* Hero section */
+.hero-section {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar styling */
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Card hover effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--primary);
+  border-radius: 50%;
+  padding: 20px;
+}
+
+/* Form styling */
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(5, 150, 105, 0.25);
+}
+
+/* Accordion styling */
+.accordion-button:not(.collapsed) {
+  background-color: var(--muted);
+  color: var(--primary);
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(5, 150, 105, 0.25);
+}
+
+/* Animation classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    text-align: center;
+  }
+
+  .display-4 {
+    font-size: 2.5rem;
+  }
+
+  .display-5 {
+    font-size: 2rem;
+  }
+}
+
+/* Loading animation */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Success message */
+.alert-success {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
